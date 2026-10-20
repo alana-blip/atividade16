@@ -15,14 +15,14 @@ app.get('/v1/hi', function(req, res) {
     const out = {
         msg: "Hello, world!"
     }
-    res.json(out)
+    res.status(200).json(out)
 })
 
 app.get('/v1/hi/user/:name', function(req, res) {
     const out = {
         msg: "Hello, " + req.params.name.toUpperCase()
     }
-    res.json(out)
+    res.status(200).json(out)
 })
 
 app.post('/v1/hi', (req, res) => {
